@@ -1,0 +1,13 @@
+.palabra {
+    display: inline-block;
+}
+
+.palabra input {
+    background-color: rgba(255,255,255,0);
+    border: none;
+    border-bottom: 1px solid black;
+    width: 30px;
+    margin: 20px;
+    text-align: center;
+    font-size: 24px;
+}

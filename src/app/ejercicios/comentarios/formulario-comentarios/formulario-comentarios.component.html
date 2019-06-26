@@ -1,0 +1,6 @@
+
+Nombre: <input [(ngModel)]="nombre" name="nombre" type="text"><br>
+Apellido: <input [(ngModel)]="apellido" name="apellido" type="text"><br>
+Comentario: <textarea [(ngModel)]="comentario" name="comentario" ></textarea><br>
+<button (click)="crearComentario()">Crear comentario</button><br>
+<comentario [comentarios]="comentarios" [id]="id"></comentario>

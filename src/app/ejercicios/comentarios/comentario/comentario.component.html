@@ -1,0 +1,6 @@
+<div *ngFor="let comentario of comentarios">
+  <p>Nombre: <span>{{ comentario.nombre }}</span></p><br>
+  <p>Apellido: <span>{{ comentario.apellido }}</span></p><br>
+  <p>Comentario: <span>{{ comentario.comentario }}</span></p><br>
+  <button (click)="deleteComentario(comentario.id)">X</button><br>
+</div>

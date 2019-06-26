@@ -1,0 +1,9 @@
+.textoBlanco {
+    color: black;
+    background-color: white;
+}
+
+.textoNegro {
+    color: white;
+    background-color: black;
+}
