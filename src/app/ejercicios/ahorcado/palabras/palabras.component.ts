@@ -59,7 +59,7 @@ export class PalabrasComponent implements OnInit {
 
   showWord() {
     this.word = [];
-    this.selectedWord = this.mainArray[Math.trunc(Math.random() * animales.length)];
+    this.selectedWord = this.mainArray[Math.trunc(Math.random() * this.mainArray.length)];
     for (let i = 0; i < this.selectedWord.length; i++) {
       if (this.selectedWord[i] === ' ') {
         this.word.push(' ');
