@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HostListener } from '@angular/core';
 import { animales, jugadores, peliculas, videojuegos } from '../lista_nombres.js';
+import { Router, ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs';
 import swal from 'sweetalert2';
 
 @Component({
@@ -16,14 +18,39 @@ export class PalabrasComponent implements OnInit {
     this.checkLetter(event.key);
   }
 
+  id: any; 
   word: string[] = [];
   selectedWord: string = "";
   palabras: string[] = [];
+  mainArray: string[] = [];
 
-  constructor() { }
+  constructor(private route: ActivatedRoute, private router: Router) {
+    router.events.subscribe((val) => {
+     this.id = this.route.snapshot.paramMap.get('id');
+     this.loadArray(parseInt(this.id));
+     this.showWord();
+    })
+  }
 
   ngOnInit() {
     this.showWord();
+  }
+
+  loadArray(id) {
+    switch (id) {
+      case 1:
+        this.mainArray = animales;
+      break;
+      case 2:
+          this.mainArray = jugadores;
+      break;
+      case 3:
+          this.mainArray = peliculas;
+      break;
+      case 4:
+          this.mainArray = videojuegos;
+      break;
+    }
   }
 
   showInfo() {
@@ -32,8 +59,7 @@ export class PalabrasComponent implements OnInit {
 
   showWord() {
     this.word = [];
-    this.selectedWord = animales[Math.trunc(Math.random() * animales.length)];
-    console.log(this.selectedWord);
+    this.selectedWord = this.mainArray[Math.trunc(Math.random() * animales.length)];
     for (let i = 0; i < this.selectedWord.length; i++) {
       if (this.selectedWord[i] === ' ') {
         this.word.push(' ');
@@ -49,6 +75,7 @@ export class PalabrasComponent implements OnInit {
         this.word[i] = this.selectedWord[i];
       }
     }
+    console.log(this.word)
     this.checkWord();
   }
 

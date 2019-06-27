@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
+  categorias: string[] = ['animales', 'jugadores', 'peliculas', 'videojuegos'];
+
   constructor() { }
 
   ngOnInit() {

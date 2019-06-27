@@ -1,0 +1,48 @@
+.menu {
+    display: inline-block;
+}
+
+.botonanimales {
+    padding: 100px 150px 100px 150px;
+    margin: 30px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 30px;
+    color: white;
+    background-image: url('../../../../assets/images/animales.jpg');
+    background-size: cover;   
+}
+.botonjugadores {
+    padding: 100px 150px 100px 150px;
+    margin: 30px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 30px;
+    color: white;
+    background-image: url('../../../../assets/images/jugadores.jpg');
+    background-size: cover;   
+}
+.botonpeliculas {
+    padding: 100px 150px 100px 150px;
+    margin: 30px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 30px;
+    color: white;
+    background-image: url('../../../../assets/images/peliculas.jpg');
+    background-size: cover;   
+}
+.botonvideojuegos {
+    padding: 100px 150px 100px 150px;
+    margin: 30px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 30px;
+    color: white;
+    background-image: url('../../../../assets/images/videojuegos.jpg');
+    background-size: cover;   
+}
